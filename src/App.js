@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Trainings from "./trainings/trainings";
+import TrainingsModel from "./trainings/db/trainings-model";
 
 function App() {
+
+  const sampleData = [
+    new TrainingsModel({dateString: '12.12.13', distance: '5'}),
+    new TrainingsModel({dateString: '12.02.23', distance: '10'}),
+    new TrainingsModel({dateString: '20.01.22', distance: '15'}),
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <Trainings records={sampleData}/>
+  )
 }
 
 export default App;

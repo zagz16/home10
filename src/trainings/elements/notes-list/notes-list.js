@@ -16,7 +16,7 @@ function NotesList(props) {
         const exist = notes.findIndex(note => note.date === data.dateString);
         if (exist >= 0) {
             setNotes(oldNotes => oldNotes.map((note, index) =>
-                index === exist ? {...note, distance: data.distance} : note));
+                index === exist ? {...note, distance:+note.distance+ +data.distance} : note));
             setDateValue('')
             setDistanceValue('');
             setFocus(false);

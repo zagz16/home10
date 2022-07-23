@@ -22,9 +22,11 @@ function InputForm(props) {
     }
 
     const dateChangeHandler = (e) => {
-        onDateChange(e.target.value);
+       
+        onDateChange(e.target.value);  //получение даты
     }
     const distanceChangeHandler = (e) => {
+        console.log(e.target.value)
         onDistanceChange(e.target.value);
     }
 
@@ -46,7 +48,7 @@ function InputForm(props) {
             </div>
             <div className={'distance-input-container'}>
                 <label htmlFor={"distance"} className={'distance-input-label'}>{'Дистанция (км)'}</label>
-                <input className={'distance-input'} type={"text"}
+                <input className={'distance-input'} type={"number"}
                        onChange={distanceChangeHandler}
                        name={"distance"} value={distanceValue} required ref={distRef}
                 />

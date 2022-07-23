@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Trainings(props) {
     const {records} = props;
-
+console.log(records);
     return (
         <div className={'trainings-container'}>
             <h2 className={'trainings-header'}>Тренировки</h2>
